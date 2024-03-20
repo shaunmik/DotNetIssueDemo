@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+<!-- DisableTransitiveProjectReferences causes NetStandard2.0 version of TripleTarget to be picked -->
+        <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\IntermediateStandard\IntermediateStandard.csproj" />
+        
+<!--        Alternatively, below line can be added to force dotnet build to pick up proper TripleTarget.dll-->
+<!--        <ProjectReference Include="..\TripleTarget\TripleTarget.csproj" />-->
+    </ItemGroup>
+</Project>
